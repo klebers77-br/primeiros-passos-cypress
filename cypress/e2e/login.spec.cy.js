@@ -4,9 +4,10 @@ describe('Orange HRM Test', () => {
     passwordField:"[name='password']",
     loginButton:"[type='submit']",
     sectionTitleTopBar:".oxd-topbar-header-breadcrumb-module",
+    deashboardGrid:".orangehrm-dashboard-grid",
     wrongCredentialAlert: "[role='alert']"
-  } 
-  it('Login - Success', () => {
+  }                 
+    it('Login - Success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get(selectorList.usernameField).type('Admin')
     cy.get(selectorList.passwordField).type('admin123')
